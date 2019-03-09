@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  flex-direction: column;
+  > * {
+    margin-bottom: 7px;
+  }
+}
+app-news-list {
+  flex: 0 0 500px;
+  width: 500px;
+}
+app-search-box {
+  width: 500px;
+}

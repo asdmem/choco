@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="caption">
+    <div class="rate-box">
+      <div
+        class="rate rate-up"
+        [ngClass]="{ active: news?.rating === 0 }"
+        (click)="rateUp(news)"
+      ></div>
+      <div
+        class="rate rate-down"
+        [ngClass]="{ active: news?.rating === 1 }"
+        (click)="rateDown(news)"
+      ></div>
+    </div>
+    <h3>{{ news?.caption }}</h3>
+    <span class="close">Esc to close</span>
+  </div>
+  <div class="body">{{ news?.body }}</div>
+</div>

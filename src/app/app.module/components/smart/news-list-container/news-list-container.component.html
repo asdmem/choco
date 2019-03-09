@@ -1,0 +1,9 @@
+<h1>Последние новости</h1>
+<app-search-box (changed)="search($event)"></app-search-box>
+<app-news-list
+  [refNews]="refNews"
+  (scrollThresholdReached)="loadMore()"
+  [threshold]="85"
+  (rateUpdated)="rateUpdated($event)"
+></app-news-list>
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+<a
+  *ngFor="let news of newsArray; trackBy: trackBy"
+  class="new"
+  [routerLink]="[news.id]"
+>
+  <div class="rate-box">
+    <div
+      class="rate rate-up"
+      (click)="rateUp(news)"
+      [ngClass]="{ active: news.rating === 0 }"
+    ></div>
+    <div
+      class="rate rate-down"
+      (click)="rateDown(news)"
+      [ngClass]="{ active: news.rating === 1 }"
+    ></div>
+  </div>
+  <div class="content">
+    <h3>{{ news.caption }}</h3>
+    <div>
+      {{ news.body | slice: 0:100 }}
+      <span [hidden]="news.body.length < 100">...</span>
+    </div>
+  </div>
+</a>
